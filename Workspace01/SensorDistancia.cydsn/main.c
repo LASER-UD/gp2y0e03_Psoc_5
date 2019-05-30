@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define GP2Y0E          (0x80)>>1
+#define GP2Y0E         (0x80)>>1
 #define SHIFT_BYTE      0x02 //64 cm shift = 2 128 cm shift = 1
 #define SHIFT_ADDR      0x35
 #define DISTANCE_ADDR1  0x5E
@@ -69,9 +69,9 @@ I2C_MasterWriteByte(load);
 I2C_MasterSendStop();
 }
 
-static void e_fuse_stage1() {
+void e_fuse_stage1() {
     DS_write(0xEC, 0xFF);
-    vpp_distance_Write(1);
+    VDAC8_SetValue(206);
 }
 
 /*
@@ -80,7 +80,6 @@ static void e_fuse_stage1() {
  * Data=0x00 is set in Address=0xC8.
  */
 void e_fuse_stage2() {
-
     DS_write(0xC8, 0x00);
 }
 
@@ -92,7 +91,6 @@ void e_fuse_stage2() {
  * + bank value: 5 => Bank E
  */
 void e_fuse_stage3() {
-  
     DS_write(0xC9, 0x45);
 }
 
@@ -127,9 +125,8 @@ void e_fuse_stage5() {
  * Vpp terminal is grounded.
  */
 void e_fuse_stage6() {
-   
     DS_write(0xCA, 0x00);
-    vpp_distance_Write(0);
+    VDAC8_SetValue(0);
 }
 
 /*
@@ -192,7 +189,7 @@ void e_fuse_run( uint8_t new_address) {
         UART_PutString("[ERROR] The new address must be 0x0f or lower!\r\n");
         return;
     }
-vpp_distance_Write(0);
+    VDAC8_SetValue(0);
     CyDelayUs(500);
     e_fuse_stage1();
     e_fuse_stage2();
@@ -208,6 +205,24 @@ vpp_distance_Write(0);
 }
 
 
+CY_ISR(InterrupRx){
+    dato=UART_GetChar();//recibe el dato del bluetooth
+    switch (dato){
+        case '5':{            
+            break;
+        }
+        
+        case '6':
+        {   // Atras Fin
+            break;
+        }
+        default:
+        {
+            break;
+        }
+    }
+}
+
 
 
 int main(void)
@@ -217,15 +232,20 @@ int main(void)
     /*Inicia los Modulos */
     UART_Start(); 
     I2C_Start();
- 
+    VDAC8_Start();
+    VDAC8_SetValue(0);
+    IRQRX_StartEx(InterrupRx);
     UART_PutString("Iniciando\r\n");
     DS_init();//Inicia sensor de distancia
-    //DS_beginread();
     UART_PutString("Salio\r\n");
-    e_fuse_run(0x00);
+    //e_fuse_run(0x00);
     
     for(;;)
     {
+            DS_get_data();     
+            sprintf(buffer,"%d\n\r",distance_cm);//lo codifica en ascci
+            UART_PutString(buffer);
+            CyDelay(500);
     // velocidad de sensado
         
     }

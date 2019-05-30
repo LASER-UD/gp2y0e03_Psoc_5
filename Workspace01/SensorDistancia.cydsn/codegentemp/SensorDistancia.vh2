@@ -2,7 +2,7 @@
 --	Conversion of SensorDistancia.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed May 29 19:43:51 2019
+--	Thu May 30 11:15:55 2019
 --
 
 USE cypress.cypress.all;
@@ -402,11 +402,6 @@ SIGNAL Net_23 : bit;
 SIGNAL \I2C:Net_975\ : bit;
 SIGNAL Net_21 : bit;
 SIGNAL Net_22 : bit;
-SIGNAL tmpOE__vpp_distance_net_0 : bit;
-SIGNAL tmpFB_0__vpp_distance_net_0 : bit;
-SIGNAL tmpIO_0__vpp_distance_net_0 : bit;
-TERMINAL tmpSIOVREF__vpp_distance_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__vpp_distance_net_0 : bit;
 SIGNAL tmpOE__LED_net_0 : bit;
 SIGNAL tmpFB_0__LED_net_0 : bit;
 SIGNAL tmpIO_0__LED_net_0 : bit;
@@ -417,6 +412,16 @@ SIGNAL tmpFB_0__PIN_E_net_0 : bit;
 SIGNAL tmpIO_0__PIN_E_net_0 : bit;
 TERMINAL tmpSIOVREF__PIN_E_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__PIN_E_net_0 : bit;
+SIGNAL tmpOE__POUT_net_0 : bit;
+SIGNAL tmpFB_0__POUT_net_0 : bit;
+TERMINAL Net_26 : bit;
+SIGNAL tmpIO_0__POUT_net_0 : bit;
+TERMINAL tmpSIOVREF__POUT_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__POUT_net_0 : bit;
+SIGNAL \VDAC8:Net_83\ : bit;
+SIGNAL \VDAC8:Net_81\ : bit;
+SIGNAL \VDAC8:Net_82\ : bit;
+TERMINAL \VDAC8:Net_77\ : bit;
 SIGNAL \UART:BUART:reset_reg\\D\ : bit;
 SIGNAL \UART:BUART:txn\\D\ : bit;
 SIGNAL \UART:BUART:tx_state_1\\D\ : bit;
@@ -1202,76 +1207,6 @@ R_2:cy_annotation_universal_v1_0
 		oe=>one,
 		y=>Net_612,
 		yfb=>\I2C:Net_1109_1\);
-vpp_distance:cy_psoc3_pins_v1_10
-	GENERIC MAP(id=>"253dc6ac-65c0-41cc-80d1-db31d725a262",
-		drive_mode=>"110",
-		ibuf_enabled=>"1",
-		init_dr_st=>"0",
-		input_sync=>"1",
-		input_clk_en=>'0',
-		input_sync_mode=>"0",
-		intr_mode=>"00",
-		invert_in_clock=>'0',
-		invert_in_clock_en=>'0',
-		invert_in_reset=>'0',
-		invert_out_clock=>'0',
-		invert_out_clock_en=>'0',
-		invert_out_reset=>'0',
-		io_voltage=>"",
-		layout_mode=>"CONTIGUOUS",
-		output_conn=>"0",
-		output_sync=>"0",
-		output_clk_en=>'0',
-		output_mode=>"0",
-		output_reset=>'0',
-		output_clock_mode=>"0",
-		oe_sync=>"0",
-		oe_conn=>"0",
-		oe_reset=>'0',
-		pin_aliases=>"",
-		pin_mode=>"O",
-		por_state=>4,
-		sio_group_cnt=>0,
-		sio_hifreq=>"00000000",
-		sio_hyst=>"1",
-		sio_ibuf=>"00000000",
-		sio_info=>"00",
-		sio_obuf=>"00000000",
-		sio_refsel=>"00000000",
-		sio_vtrip=>"00000000",
-		sio_vohsel=>"00000000",
-		slew_rate=>"0",
-		spanning=>'0',
-		sw_only=>'0',
-		vtrip=>"10",
-		width=>1,
-		port_alias_required=>'0',
-		port_alias_group=>"",
-		use_annotation=>"0",
-		pa_in_clock=>-1,
-		pa_in_clock_en=>-1,
-		pa_in_reset=>-1,
-		pa_out_clock=>-1,
-		pa_out_clock_en=>-1,
-		pa_out_reset=>-1,
-		ovt_needed=>"0",
-		ovt_slew_control=>"00",
-		ovt_hyst_trim=>"0",
-		input_buffer_sel=>"00")
-	PORT MAP(oe=>(one),
-		y=>(Net_6),
-		fb=>(tmpFB_0__vpp_distance_net_0),
-		analog=>(open),
-		io=>(tmpIO_0__vpp_distance_net_0),
-		siovref=>(tmpSIOVREF__vpp_distance_net_0),
-		annotation=>(open),
-		in_clock=>Net_6,
-		in_clock_en=>one,
-		in_reset=>Net_6,
-		out_clock=>Net_6,
-		out_clock_en=>one,
-		out_reset=>Net_6,
-		interrupt=>tmpINTERRUPT_0__vpp_distance_net_0);
 LED:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"a53bc6c3-64c8-4074-a1e3-a68e550bbda2",
 		drive_mode=>"110",
@@ -1412,6 +1347,91 @@ PIN_E:cy_psoc3_pins_v1_10
 		out_clock_en=>one,
 		out_reset=>Net_6,
 		interrupt=>tmpINTERRUPT_0__PIN_E_net_0);
+POUT:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"77715107-f8d5-47e5-a629-0fb83101ac6b",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"A",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(one),
+		y=>(Net_6),
+		fb=>(tmpFB_0__POUT_net_0),
+		analog=>Net_26,
+		io=>(tmpIO_0__POUT_net_0),
+		siovref=>(tmpSIOVREF__POUT_net_0),
+		annotation=>(open),
+		in_clock=>Net_6,
+		in_clock_en=>one,
+		in_reset=>Net_6,
+		out_clock=>Net_6,
+		out_clock_en=>one,
+		out_reset=>Net_6,
+		interrupt=>tmpINTERRUPT_0__POUT_net_0);
+\VDAC8:viDAC8\:cy_psoc3_vidac8_v1_0
+	GENERIC MAP(cy_registers=>"",
+		reg_data=>'0',
+		is_all_if_any=>'0')
+	PORT MAP(reset=>Net_6,
+		idir=>Net_6,
+		ioff=>Net_6,
+		data=>(Net_6, Net_6, Net_6, Net_6,
+			Net_6, Net_6, Net_6, Net_6),
+		strobe=>Net_6,
+		strobe_udb=>Net_6,
+		vout=>Net_26,
+		iout=>\VDAC8:Net_77\);
+\VDAC8:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\VDAC8:Net_77\);
 \UART:BUART:reset_reg\:cy_dff
 	PORT MAP(d=>Net_6,
 		clk=>\UART:BUART:clock_op\,
