@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define GP2Y0E         (0x60)
+#define GP2Y0E         (0x40)
 #define SHIFT_BYTE      0x02 //64 cm shift = 2 128 cm shift = 1
 #define SHIFT_ADDR      0x35
 #define DISTANCE_ADDR1  0x5E
@@ -441,22 +441,18 @@ int main(void)
     VDAC8_SetValue(0);
     IRQRX_StartEx(InterrupRx);
     UART_PutString("Iniciando\r\n");
-//    DS_init();//Inicia sensor de distancia
-//    DS_get_data();     
-//    sprintf(buffer,"%d\n\r",distance_cm);//lo codifica en ascci
-//    UART_PutString(buffer);
-//    CyDelay(8000);
-//    UART_PutString("Iniciando2\r\n");
-//    e_fuse_run(0x00);
-//    UART_PutString("Termino\r\n");
+    DS_init();//Inicia sensor de distancia
+    DS_get_data();     
+    sprintf(buffer,"%d\n\r",distance_cm);//lo codifica en ascci
+    UART_PutString(buffer);
+    CyDelay(8000);
+    UART_PutString("Iniciando2\r\n");
+    e_fuse_run(0x00);
+    UART_PutString("Termino\r\n");
     
     for(;;)
     {
-    DS_init();//Inicia sensor de distancia
-    DS_get_data();
-    sprintf(buffer,"%d\n\r",distance_cm);//lo codifica en ascci
-    UART_PutString(buffer);
-    CyDelay(500);
+
     // velocidad de sensado
         
     }
