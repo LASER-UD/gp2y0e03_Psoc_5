@@ -20,19 +20,19 @@ char distance_cm=0;
 void DS_beginread (void){
         do{
                 //Espera mienstras el esclavo le responde
-        }while(I2C_MasterSendStart(GP2Y0E, I2C_WRITE_XFER_MODE)!=I2C_MSTR_NO_ERROR);
+        }while(I2C_MasterSendStart(GP2Y0E, I2C_READ_XFER_MODE)!=I2C_MSTR_NO_ERROR);
 }
 void DS_beginwrite(void){
         do{
                 //Espera mienstras el esclavo le responde
-    }while(I2C_MasterSendStart(GP2Y0E, I2C_READ_XFER_MODE)!=I2C_MSTR_NO_ERROR);
+    }while(I2C_MasterSendStart(GP2Y0E, I2C_WRITE_XFER_MODE)!=I2C_MSTR_NO_ERROR);
 }
 void DS_init(void){
     //Funcion de configuracion o de escritura de registros
-    DS_beginread();
+    DS_beginwrite();
     I2C_MasterWriteByte(SHIFT_ADDR);//Pone direccion de memoria que quiere leer 
     I2C_MasterSendStop(); 
-    DS_beginwrite();
+    DS_beginread();
     sprintf(buffer,"shift %02X\n\r",I2C_MasterReadByte(I2C_NAK_DATA));//lo codifica en ascci
     I2C_MasterSendStop();
     UART_PutString(buffer);
@@ -40,10 +40,10 @@ void DS_init(void){
 
 void DS_get_data(){   
     char datai2c[2]={0,0};
-    DS_beginread();
+    DS_beginwrite();
     I2C_MasterWriteByte(DISTANCE_ADDR1);//Pone direccion de memoria que quiere leer 
     I2C_MasterSendStop(); 
-    DS_beginwrite();
+    DS_beginread();
     datai2c[0]=I2C_MasterReadByte(I2C_NAK_DATA);//lo codifica en ascci
     datai2c[1]=I2C_MasterReadByte(I2C_NAK_DATA);
     I2C_MasterSendStop();
@@ -53,10 +53,10 @@ void DS_get_data(){
 
 char DS_read(char adress){                   
     char data;
-    DS_beginread();
+    DS_beginwrite();
     I2C_MasterWriteByte(adress);//Pone direccion de memoria que quiere leer 
     I2C_MasterSendStop(); 
-    DS_beginwrite();
+    DS_beginread();
     data=I2C_MasterReadByte(I2C_NAK_DATA);//lo codifica en ascci
     I2C_MasterSendStop();
     return data;
@@ -65,7 +65,9 @@ char DS_read(char adress){
 void DS_write(char adress, char load){
 DS_beginwrite();
 I2C_MasterWriteByte(adress);
+UART_PutString("adress \r\n");
 I2C_MasterWriteByte(load);
+UART_PutString("load \r\n");
 I2C_MasterSendStop();
 }
 
@@ -180,6 +182,7 @@ uint8_t e_fuse_stage9() {
     // Check Result
     return success;
 }
+
 void e_fuse_run( uint8_t new_address) {
     if (new_address == GP2Y0E) {
         UART_PutString("[ERROR] The new address must be other than 0x08!\r\n");
@@ -192,13 +195,21 @@ void e_fuse_run( uint8_t new_address) {
     VDAC8_SetValue(0);
     CyDelayUs(500);
     e_fuse_stage1();
+    UART_PutString("stage1");
     e_fuse_stage2();
+    UART_PutString("stage2");
     e_fuse_stage3();
+    UART_PutString("stage3");
     e_fuse_stage4( new_address);
+    UART_PutString("stage4");
     e_fuse_stage5();
+    UART_PutString("stage5");
     e_fuse_stage6();
+    UART_PutString("stage6");
     e_fuse_stage7();
+    UART_PutString("stage7");
     e_fuse_stage8();
+    UART_PutString("stage8");
     const uint8_t result = e_fuse_stage9();
     sprintf(buffer,"e_fuse_stage9():result => %d (0=success)\r\n", result);//lo codifica en ascci
     UART_PutString(buffer);
@@ -237,15 +248,19 @@ int main(void)
     IRQRX_StartEx(InterrupRx);
     UART_PutString("Iniciando\r\n");
     DS_init();//Inicia sensor de distancia
-    UART_PutString("Salio\r\n");
-    //e_fuse_run(0x00);
+    DS_get_data();     
+    sprintf(buffer,"%d\n\r",distance_cm);//lo codifica en ascci
+    UART_PutString(buffer);
+    DS_write(SHIFT_ADDR,0x02);//CAMBIA LA DISTANCIA DEL SENSOR
+    DS_init();//Inicia sensor de distancia
+//    CyDelay(10000);
+//    UART_PutString("Iniciando2\r\n");
+//    e_fuse_run(0x00);
+//    UART_PutString("Termino\r\n");
     
     for(;;)
     {
-            DS_get_data();     
-            sprintf(buffer,"%d\n\r",distance_cm);//lo codifica en ascci
-            UART_PutString(buffer);
-            CyDelay(500);
+            
     // velocidad de sensado
         
     }

@@ -141,44 +141,6 @@
 <VisibleNodeIds>
 <v>Workspace01</v>
 <v>Workspace01\SensorDistancia</v>
-<v>Workspace01\SensorDistancia\CortexM3</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_BOOT.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_INT.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_MASTER.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_PM.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_SLAVE.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\IRQRX.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\PIN_E.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\POUT.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\VDAC8.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\VDAC8_PM.lst</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\SensorDistancia.elf</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\SensorDistancia.hex</v>
-<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\SensorDistancia.map</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
