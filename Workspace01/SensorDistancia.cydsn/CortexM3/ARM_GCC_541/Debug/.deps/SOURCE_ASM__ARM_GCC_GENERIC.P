@@ -1,0 +1,10 @@
+C:/Users/LASER_2/Documents/PSoC\ Creator/gp2y0e03_Psoc_5/Workspace01/SensorDistancia.cydsn/CortexM3/ARM_GCC_541/Debug/CyBootAsmGnu.o : C:/Users/LASER_2/Documents/PSoC\ Creator/gp2y0e03_Psoc_5/Workspace01/SensorDistancia.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s C:/Users/LASER_2/Documents/PSoC\ Creator/gp2y0e03_Psoc_5/Workspace01/SensorDistancia.cydsn/Generated_Source/PSoC5/cydevicegnu.inc C:/Users/LASER_2/Documents/PSoC\ Creator/gp2y0e03_Psoc_5/Workspace01/SensorDistancia.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc C:/Users/LASER_2/Documents/PSoC\ Creator/gp2y0e03_Psoc_5/Workspace01/SensorDistancia.cydsn/Generated_Source/PSoC5/cyfittergnu.inc 
+
+C:/Users/LASER_2/Documents/PSoC\ Creator/gp2y0e03_Psoc_5/Workspace01/SensorDistancia.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s : 
+
+C:/Users/LASER_2/Documents/PSoC\ Creator/gp2y0e03_Psoc_5/Workspace01/SensorDistancia.cydsn/Generated_Source/PSoC5/cydevicegnu.inc : 
+
+C:/Users/LASER_2/Documents/PSoC\ Creator/gp2y0e03_Psoc_5/Workspace01/SensorDistancia.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc : 
+
+C:/Users/LASER_2/Documents/PSoC\ Creator/gp2y0e03_Psoc_5/Workspace01/SensorDistancia.cydsn/Generated_Source/PSoC5/cyfittergnu.inc : 
+

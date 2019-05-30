@@ -1,0 +1,6 @@
+C:\Users\LASER_2\Documents\PSoC Creator\gp2y0e03_Psoc_5\Workspace01\SensorDistancia.cydsn\SensorDistancia.cyprj|a12d551f-f289-438e-a0f1-d3e538ecf368
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|26321fd0-0b7b-40dd-b93e-da7ceb6861f9
+C:\Users\LASER_2\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|dfa70944-0083-466a-9198-4335f8139e41
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9e2885b3-d0ed-40e2-8190-d79416e2aebc
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|62c01bdd-eded-4b58-910a-74b1f00fb546
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|54acab33-a1e2-45b9-b8cd-ac8164e0101a

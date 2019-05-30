@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\SensorDistancia\Source Files\main.c">
+<ExpandedNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\SensorDistancia</v>
+<v>Workspace01\SensorDistancia\TopDesign</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\Pins</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\Analog</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\Clocks</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\Interrupts</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\DMA</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\System</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\Directives</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\Flash Security</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\EEPROM</v>
+<v>Workspace01\SensorDistancia\Header Files</v>
+<v>Workspace01\SensorDistancia\Header Files\cyapicallbacks.h</v>
+<v>Workspace01\SensorDistancia\Source Files</v>
+<v>Workspace01\SensorDistancia\Source Files\main.c</v>
+<v>Workspace01\SensorDistancia\Generated_Source</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\SensorDistancia</v>
+<v>Workspace01\SensorDistancia\TopDesign</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\Pins</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\Analog</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\Clocks</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\Interrupts</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\DMA</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\System</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\Directives</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\Flash Security</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.cydwr\EEPROM</v>
+<v>Workspace01\SensorDistancia\Header Files</v>
+<v>Workspace01\SensorDistancia\Header Files\cyapicallbacks.h</v>
+<v>Workspace01\SensorDistancia\Source Files</v>
+<v>Workspace01\SensorDistancia\Source Files\main.c</v>
+<v>Workspace01\SensorDistancia\Generated_Source</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cy_boot</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\I2C</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\IRQRX</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\LED</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\PIN_E</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\SCL</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\SDA</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\UART</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\UART_IntClock</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\vpp_distance</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\vpp_distance_1</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cydevice.h</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cyfitter.h</v>
+<v>Workspace01\SensorDistancia\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\SensorDistancia</v>
+<v>Workspace01\SensorDistancia\TopDesign</v>
+<v>Workspace01\SensorDistancia\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\SensorDistancia</v>
+<v>Workspace01\SensorDistancia\TopDesign</v>
+<v>Workspace01\SensorDistancia\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\SensorDistancia</v>
+<v>Workspace01\SensorDistancia\CortexM3</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_BOOT.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_INT.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_MASTER.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_PM.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_SLAVE.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\IRQRX.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\PIN_E.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\vpp_distance.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\vpp_distance_1.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\SensorDistancia.elf</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\SensorDistancia.hex</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\SensorDistancia.map</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.gpdsc</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.rpt</v>
+<v>Workspace01\SensorDistancia\SensorDistancia_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\SensorDistancia</v>
+<v>Workspace01\SensorDistancia\CortexM3</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_BOOT.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_INT.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_MASTER.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_PM.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_SLAVE.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\IRQRX.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\PIN_E.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\vpp_distance.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\Listing Files\vpp_distance_1.lst</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\SensorDistancia.elf</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\SensorDistancia.hex</v>
+<v>Workspace01\SensorDistancia\CortexM3\ARM_GCC_541\Debug\SensorDistancia.map</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.gpdsc</v>
+<v>Workspace01\SensorDistancia\SensorDistancia.rpt</v>
+<v>Workspace01\SensorDistancia\SensorDistancia_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\SensorDistancia</v>
+<v>Workspace01\SensorDistancia\PSoC 5LP Architecture TRM</v>
+<v>Workspace01\SensorDistancia\CY8C58LP Family Datasheet</v>
+<v>Workspace01\SensorDistancia\System Reference Guides</v>
+<v>Workspace01\SensorDistancia\System Reference Guides\cy_boot_v5_80</v>
+<v>Workspace01\SensorDistancia\cy_constant_v1_0.pdf</v>
+<v>Workspace01\SensorDistancia\cy_isr_v1_70.pdf</v>
+<v>Workspace01\SensorDistancia\cy_pins_v2_20</v>
+<v>Workspace01\SensorDistancia\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace01\SensorDistancia\Gnd_v1_0.pdf</v>
+<v>Workspace01\SensorDistancia\I2C_v3_50.pdf</v>
+<v>Workspace01\SensorDistancia\Power_v1_0.pdf</v>
+<v>Workspace01\SensorDistancia\Resistor_v1_0</v>
+<v>Workspace01\SensorDistancia\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Workspace01\SensorDistancia\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace01</v>
+<v>Workspace01\SensorDistancia</v>
+<v>Workspace01\SensorDistancia\PSoC 5LP Architecture TRM</v>
+<v>Workspace01\SensorDistancia\CY8C58LP Family Datasheet</v>
+<v>Workspace01\SensorDistancia\System Reference Guides</v>
+<v>Workspace01\SensorDistancia\System Reference Guides\cy_boot_v5_80</v>
+<v>Workspace01\SensorDistancia\cy_constant_v1_0.pdf</v>
+<v>Workspace01\SensorDistancia\cy_isr_v1_70.pdf</v>
+<v>Workspace01\SensorDistancia\cy_pins_v2_20</v>
+<v>Workspace01\SensorDistancia\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace01\SensorDistancia\Gnd_v1_0.pdf</v>
+<v>Workspace01\SensorDistancia\I2C_v3_50.pdf</v>
+<v>Workspace01\SensorDistancia\Power_v1_0.pdf</v>
+<v>Workspace01\SensorDistancia\Resistor_v1_0</v>
+<v>Workspace01\SensorDistancia\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Workspace01\SensorDistancia\UART_v2_50.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\SensorDistancia.cydsn\TopDesign\TopDesign.cysch" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="674, 656" SelectedTabbedMdiWindow="5c3c173d-5ae0-4f83-9cdf-f63793a03dbf"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="375e159d-001e-428f-8545-e79ba1f3d577" /><DocumentWindow Key="C:\Users\LASER_2\Documents\PSoC Creator\gp2y0e03_Psoc_5\Workspace01\SensorDistancia.cydsn\TopDesign\TopDesign.cysch" Guid="5c3c173d-5ae0-4f83-9cdf-f63793a03dbf" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
