@@ -88,9 +88,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PIN_E_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PIN_E.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PIN_E.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\vpp_distance_1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\vpp_distance_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\vpp_distance_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_IntClock.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_IntClock.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cy_em_eeprom.c</File>

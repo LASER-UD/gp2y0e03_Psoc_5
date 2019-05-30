@@ -183,11 +183,29 @@ uint8_t e_fuse_stage9() {
     // Check Result
     return success;
 }
-
-
-
-
-
+void e_fuse_run( uint8_t new_address) {
+    if (new_address == GP2Y0E) {
+        UART_PutString("[ERROR] The new address must be other than 0x08!\r\n");
+        return;
+    }
+    if (new_address > 0x0f) {
+        UART_PutString("[ERROR] The new address must be 0x0f or lower!\r\n");
+        return;
+    }
+vpp_distance_Write(0);
+    CyDelayUs(500);
+    e_fuse_stage1();
+    e_fuse_stage2();
+    e_fuse_stage3();
+    e_fuse_stage4( new_address);
+    e_fuse_stage5();
+    e_fuse_stage6();
+    e_fuse_stage7();
+    e_fuse_stage8();
+    const uint8_t result = e_fuse_stage9();
+    sprintf(buffer,"e_fuse_stage9():result => %d (0=success)\r\n", result);//lo codifica en ascci
+    UART_PutString(buffer);
+}
 
 
 
@@ -198,21 +216,17 @@ int main(void)
     CyGlobalIntEnable; /* Enable global interrupts. */
     /*Inicia los Modulos */
     UART_Start(); 
-    IRQRX_StartEx(InterrupRx);
-
     I2C_Start();
  
     UART_PutString("Iniciando\r\n");
     DS_init();//Inicia sensor de distancia
     //DS_beginread();
     UART_PutString("Salio\r\n");
+    e_fuse_run(0x00);
+    
     for(;;)
     {
-
-        DS_get_data();     
-        sprintf(buffer,"%d\n\r",distance_cm);//lo codifica en ascci
-        UART_PutString(buffer);
-        CyDelay(500);         // velocidad de sensado
+    // velocidad de sensado
         
     }
 }

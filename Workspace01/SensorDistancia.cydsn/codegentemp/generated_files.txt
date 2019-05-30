@@ -48,9 +48,6 @@
   <file name="C:\Users\LASER_2\Documents\PSoC Creator\gp2y0e03_Psoc_5\Workspace01\SensorDistancia.cydsn\codegentemp\PIN_E_aliases.h" value="HEADER;;;;;PIN_E" />
   <file name="C:\Users\LASER_2\Documents\PSoC Creator\gp2y0e03_Psoc_5\Workspace01\SensorDistancia.cydsn\codegentemp\PIN_E.c" value="SOURCE_C;CortexM3;;;;PIN_E" />
   <file name="C:\Users\LASER_2\Documents\PSoC Creator\gp2y0e03_Psoc_5\Workspace01\SensorDistancia.cydsn\codegentemp\PIN_E.h" value="HEADER;;;;;PIN_E" />
-  <file name="C:\Users\LASER_2\Documents\PSoC Creator\gp2y0e03_Psoc_5\Workspace01\SensorDistancia.cydsn\codegentemp\vpp_distance_1_aliases.h" value="HEADER;;;;;vpp_distance_1" />
-  <file name="C:\Users\LASER_2\Documents\PSoC Creator\gp2y0e03_Psoc_5\Workspace01\SensorDistancia.cydsn\codegentemp\vpp_distance_1.c" value="SOURCE_C;CortexM3;;;;vpp_distance_1" />
-  <file name="C:\Users\LASER_2\Documents\PSoC Creator\gp2y0e03_Psoc_5\Workspace01\SensorDistancia.cydsn\codegentemp\vpp_distance_1.h" value="HEADER;;;;;vpp_distance_1" />
   <file name="C:\Users\LASER_2\Documents\PSoC Creator\gp2y0e03_Psoc_5\Workspace01\SensorDistancia.cydsn\codegentemp\UART_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_IntClock" />
   <file name="C:\Users\LASER_2\Documents\PSoC Creator\gp2y0e03_Psoc_5\Workspace01\SensorDistancia.cydsn\codegentemp\UART_IntClock.h" value="HEADER;;;;;UART_IntClock" />
   <file name="C:\Users\LASER_2\Documents\PSoC Creator\gp2y0e03_Psoc_5\Workspace01\SensorDistancia.cydsn\codegentemp\cy_em_eeprom.c" value="SOURCE_C;CortexM3;;;;Em_EEPROM_Dynamic" />
