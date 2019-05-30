@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define GP2Y0E         (0x80)>>1
+#define GP2Y0E         (0x60)
 #define SHIFT_BYTE      0x02 //64 cm shift = 2 128 cm shift = 1
 #define SHIFT_ADDR      0x35
 #define DISTANCE_ADDR1  0x5E
@@ -63,12 +63,10 @@ char DS_read(char adress){
 }
 
 void DS_write(char adress, char load){
-DS_beginwrite();
-I2C_MasterWriteByte(adress);
-UART_PutString("adress \r\n");
-I2C_MasterWriteByte(load);
-UART_PutString("load \r\n");
-I2C_MasterSendStop();
+    DS_beginwrite();
+    I2C_MasterWriteByte(adress);
+    I2C_MasterWriteByte(load);
+    I2C_MasterSendStop();
 }
 
 void e_fuse_stage1() {
@@ -174,13 +172,191 @@ uint8_t e_fuse_stage9() {
     DS_write(0xEF, 0x03);
     uint8_t check_value = DS_read(0x27);
     uint8_t check = check_value & 0x1f;
-    uint8_t success = check & 0x10;
     // When lower 5bits data[4:0] is 00001, E-Fuse program is finished.
     // When lower 5bits data[4:0] is not 00001, go to stage10(bit replacement).
     DS_write(0xEF, 0x00);
     DS_write(0xEC, 0x7F);
-    // Check Result
-    return success;
+    if(check==0b00000001){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+
+static void e_fuse_stage10_1_1() {
+    DS_write(0xEC, 0xFF);
+    VDAC8_SetValue(206);
+    //_vpp_on();
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-2
+ * Data=0x37 is set in Address=0xC8.
+ */
+static void e_fuse_stage10_2_1() {
+
+    DS_write(0xC8, 0x37);
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-3
+ * Data=0x74 is set in Address=0xC9.
+ */
+static void e_fuse_stage10_3_1() {
+
+    DS_write(0xC9, 0x74);
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-4
+ * Data=0x04 is set in Address=0xCD.
+ */
+static void e_fuse_stage10_4_1() {
+
+    DS_write(0xCD, 0x04);
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-5
+ * Data=0x01 is set in Address=0xCA.
+ * Wait for 500us.
+ */
+static void e_fuse_stage10_5_1() {
+
+    DS_write(0xCA, 0x01);
+    CyDelayUs(500);
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-6
+ * Data=0x00 is set in Address=0xCA.
+ * Vpp terminal is grounded.
+ */
+static void e_fuse_stage10_6_1() {
+    DS_write(0xCA, 0x00);
+    VDAC8_SetValue(0);
+    //_vpp_off();
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-1'
+ * Data=0xFF is set in Address=0xEC.
+ * 3.3V is applied in Vpp terminal.
+ */
+static void e_fuse_stage10_1_2() {
+
+    DS_write(0xEC, 0xFF);
+    VDAC8_SetValue(206);
+    //_vpp_on();
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-2'
+ * Data=0x3F is set in Address=0xC8.
+ */
+static void e_fuse_stage10_2_2() {
+
+    DS_write(0xC8, 0x3F);
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-3'
+ * Data=0x04 is set in Address=0xC9.
+ */
+static void e_fuse_stage10_3_2() {
+
+    DS_write(0xC9, 0x04);
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-4'
+ * Data=0x01 is set in Address=0xCD.
+ */
+static void e_fuse_stage10_4_2() {
+
+    DS_write(0xCD, 0x01);
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-5'
+ * Data=0x01 is set in Address=0xCA.
+ * Wait for 500us.
+ */
+static void e_fuse_stage10_5_2() {
+
+    DS_write(0xCA, 0x01);
+    CyDelayUs(500);
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-6'
+ * Data=0x00 is set in Address=0xCA.
+ * Vpp terminal is grounded.
+ */
+static void e_fuse_stage10_6_2() {
+
+    DS_write(0xCA, 0x00);
+    VDAC8_SetValue(0);
+    //_vpp_off();
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-7
+ * Data=0x00 is set in Address=0xEF.
+ * Data=0x40 is set in Address=0xC8.
+ * Data=0x00 is set in Address=0xC8.
+ */
+static void e_fuse_stage10_7() {
+    DS_write(0xEF, 0x00);
+    DS_write(0xC8, 0x40);
+    DS_write(0xC8, 0x00);
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-8
+ * Data=0x06 is set in Address=0xEE.
+ */
+static void e_fuse_stage10_8() {
+
+    DS_write(0xEE, 0x06);
+}
+
+/*
+ * (Fig.40 E-Fuse Program Flow)
+ * Stage 10-9
+ * Data=0xFF is set in Address=0xEC.
+ * Data=0x03 is set in Address=0xEF.
+ * Read out the data in Address=0x18 and Address=0x19.
+ */
+static void e_fuse_stage10_9() {
+    DS_write(0xEC, 0xFF);
+    DS_write(0xEF, 0x03);
+    const uint8_t bit_replacemnt_18 = DS_read(0x18);
+    const uint8_t bit_replacemnt_19 = DS_read(0x19);
+    sprintf(buffer,"Check 0x18 => %d\r\n", bit_replacemnt_18);
+    UART_PutString(buffer);
+    sprintf(buffer,"Check 0x19 => %d\r\n", bit_replacemnt_19);
+    UART_PutString(buffer);
+    if (bit_replacemnt_18 == 0x82 && bit_replacemnt_19 == 0x00) {
+        sprintf(buffer,"Bit Replacement (stage 10) is SUCCESSFUL\r\n");
+        UART_PutString(buffer);
+    } else {
+        sprintf(buffer,"Bit Replacement (stage 10) is FAILURE\r\n");
+        UART_PutString(buffer);
+    }
 }
 
 void e_fuse_run( uint8_t new_address) {
@@ -195,23 +371,41 @@ void e_fuse_run( uint8_t new_address) {
     VDAC8_SetValue(0);
     CyDelayUs(500);
     e_fuse_stage1();
-    UART_PutString("stage1");
+    UART_PutString("stage1\r\n");
     e_fuse_stage2();
-    UART_PutString("stage2");
+    UART_PutString("stage2\r\n");
     e_fuse_stage3();
-    UART_PutString("stage3");
+    UART_PutString("stage3\r\n");
     e_fuse_stage4( new_address);
-    UART_PutString("stage4");
+    UART_PutString("stage4\r\n");
     e_fuse_stage5();
-    UART_PutString("stage5");
+    UART_PutString("stage5\r\n");
     e_fuse_stage6();
-    UART_PutString("stage6");
+    UART_PutString("stage6\r\n");
     e_fuse_stage7();
-    UART_PutString("stage7");
+    UART_PutString("stage7\r\n");
     e_fuse_stage8();
-    UART_PutString("stage8");
+    UART_PutString("stage8\r\n");
     const uint8_t result = e_fuse_stage9();
-    sprintf(buffer,"e_fuse_stage9():result => %d (0=success)\r\n", result);//lo codifica en ascci
+    sprintf(buffer,"e_fuse_stage9() result => %x\r\n", result);//lo codifica en ascci
+    if (result) {
+        e_fuse_stage10_1_1();
+        e_fuse_stage10_2_1();
+        e_fuse_stage10_3_1();
+        e_fuse_stage10_4_1();
+        e_fuse_stage10_5_1();
+        e_fuse_stage10_6_1();
+        e_fuse_stage10_1_2();
+        e_fuse_stage10_2_2();
+        e_fuse_stage10_3_2();
+        e_fuse_stage10_4_2();
+        e_fuse_stage10_5_2();
+        e_fuse_stage10_6_2();
+        e_fuse_stage10_7();
+        e_fuse_stage10_8();
+        e_fuse_stage10_9();
+    }
+    
     UART_PutString(buffer);
 }
 
@@ -247,20 +441,22 @@ int main(void)
     VDAC8_SetValue(0);
     IRQRX_StartEx(InterrupRx);
     UART_PutString("Iniciando\r\n");
-    DS_init();//Inicia sensor de distancia
-    DS_get_data();     
-    sprintf(buffer,"%d\n\r",distance_cm);//lo codifica en ascci
-    UART_PutString(buffer);
-    DS_write(SHIFT_ADDR,0x02);//CAMBIA LA DISTANCIA DEL SENSOR
-    DS_init();//Inicia sensor de distancia
-//    CyDelay(10000);
+//    DS_init();//Inicia sensor de distancia
+//    DS_get_data();     
+//    sprintf(buffer,"%d\n\r",distance_cm);//lo codifica en ascci
+//    UART_PutString(buffer);
+//    CyDelay(8000);
 //    UART_PutString("Iniciando2\r\n");
 //    e_fuse_run(0x00);
 //    UART_PutString("Termino\r\n");
     
     for(;;)
     {
-            
+    DS_init();//Inicia sensor de distancia
+    DS_get_data();
+    sprintf(buffer,"%d\n\r",distance_cm);//lo codifica en ascci
+    UART_PutString(buffer);
+    CyDelay(500);
     // velocidad de sensado
         
     }
