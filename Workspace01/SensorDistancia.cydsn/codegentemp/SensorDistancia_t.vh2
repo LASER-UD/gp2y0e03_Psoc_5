@@ -1,5 +1,5 @@
--- Project:   C:\Users\nikod\Documents\PSoC Creator\gp2y0e03_Psoc_5\Workspace01\SensorDistancia.cydsn\SensorDistancia.cyprj
--- Generated: 06/01/2019 23:03:39
+-- Project:   C:\Users\LASER_2\Documents\PSoC Creator\gp2y0e03_Psoc_5\Workspace01\SensorDistancia.cydsn\SensorDistancia.cyprj
+-- Generated: 06/04/2019 15:13:03
 -- PSoC Creator  4.2
 
 ENTITY SensorDistancia IS

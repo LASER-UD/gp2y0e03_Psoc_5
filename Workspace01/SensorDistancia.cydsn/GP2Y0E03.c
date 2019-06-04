@@ -10,55 +10,53 @@
 #include "GP2Y0E03.h"
 
 
-
-char buffer[12]={};
-
-
-void DS_beginread (void){
+void DS_beginread (char sladress){
         do{
                 //Espera mienstras el esclavo le responde
-        }while(I2C_MasterSendStart(GP2Y0E, I2C_READ_XFER_MODE)!=I2C_MSTR_NO_ERROR);
-}
-void DS_beginwrite(void){
+        }while(I2C_MasterSendStart(sladress, I2C_READ_XFER_MODE)!=I2C_MSTR_NO_ERROR);
+}      //sladress= direccion del esclavo
+void DS_beginwrite(char sladress){
         do{
                 //Espera mienstras el esclavo le responde
-    }while(I2C_MasterSendStart(GP2Y0E, I2C_WRITE_XFER_MODE)!=I2C_MSTR_NO_ERROR);
+    }while(I2C_MasterSendStart(sladress, I2C_WRITE_XFER_MODE)!=I2C_MSTR_NO_ERROR);
 }
-void DS_init(void){
+
+void DS_init(char sladress){
+    char buffer[12]={};
     //Funcion de configuracion o de escritura de registro
     I2C_Start();
     VDAC8_Start();
     VDAC8_SetValue(0);
-    DS_beginwrite();
+    DS_beginwrite(sladress);
     I2C_MasterWriteByte(SHIFT_ADDR);//Pone direccion de memoria que quiere leer 
     I2C_MasterSendStop(); 
-    DS_beginread();
+    DS_beginread(sladress);
     sprintf(buffer,"shift %02X\n\r",I2C_MasterReadByte(I2C_NAK_DATA));//lo codifica en ascci
     I2C_MasterSendStop();
     UART_PutString(buffer);
 }
 
 
-char DS_read(char adress){                   
+char DS_read(char adress,char leer){                   
     char data;
-    DS_beginwrite();
-    I2C_MasterWriteByte(adress);//Pone direccion de memoria que quiere leer 
+    DS_beginwrite(adress);
+    I2C_MasterWriteByte(leer);//Pone direccion de memoria que quiere leer 
     I2C_MasterSendStop(); 
-    DS_beginread();
+    DS_beginread(adress);
     data=I2C_MasterReadByte(I2C_NAK_DATA);//lo codifica en ascci
     I2C_MasterSendStop();
     return data;
-}
+} //adress es el slave adress del dispositivo, leer es la direccion del registro que se desea ver
 
-void DS_write(char adress, char load){
-    DS_beginwrite();
+void DS_write(char slvadr, char adress, char load){
+    DS_beginwrite(slvadr);
     I2C_MasterWriteByte(adress);
     I2C_MasterWriteByte(load);
     I2C_MasterSendStop();
 }
 
 void e_fuse_stage1() {
-    DS_write(0xEC, 0xFF);
+    DS_write(GP2Y0E,0xEC, 0xFF);
     VDAC8_SetValue(206);
 }
 
@@ -68,7 +66,7 @@ void e_fuse_stage1() {
  * Data=0x00 is set in Address=0xC8.
  */
 void e_fuse_stage2() {
-    DS_write(0xC8, 0x00);
+    DS_write(GP2Y0E,0xC8, 0x00);
 }
 
 /*
@@ -79,7 +77,7 @@ void e_fuse_stage2() {
  * + bank value: 5 => Bank E
  */
 void e_fuse_stage3() {
-    DS_write(0xC9, 0x45);
+    DS_write(GP2Y0E,0xC9, 0x45);
 }
 
 /*
@@ -91,7 +89,7 @@ void e_fuse_stage3() {
  */
 void e_fuse_stage4(uint8_t new_address) {
     
-    DS_write(0xCD, new_address);
+    DS_write(GP2Y0E,0xCD, new_address);
 }
 
 /*
@@ -102,7 +100,7 @@ void e_fuse_stage4(uint8_t new_address) {
  */
 void e_fuse_stage5() {
    
-    DS_write(0xCA, 0x01);
+    DS_write(GP2Y0E,0xCA, 0x01);
     CyDelay(500);
 }
 
@@ -113,7 +111,7 @@ void e_fuse_stage5() {
  * Vpp terminal is grounded.
  */
 void e_fuse_stage6() {
-    DS_write(0xCA, 0x00);
+    DS_write(GP2Y0E,0xCA, 0x00);
     VDAC8_SetValue(0);
 }
 
@@ -126,9 +124,9 @@ void e_fuse_stage6() {
  */
 void e_fuse_stage7() {
    
-    DS_write(0xEF, 0x00);
-    DS_write(0xC8, 0x40);
-    DS_write(0xC8, 0x00);
+    DS_write(GP2Y0E,0xEF, 0x00);
+    DS_write(GP2Y0E,0xC8, 0x40);
+    DS_write(GP2Y0E,0xC8, 0x00);
 }
 
 /*
@@ -138,7 +136,7 @@ void e_fuse_stage7() {
  */
 void e_fuse_stage8() {
    
-    DS_write(0xEE, 0x06);
+    DS_write(GP2Y0E,0xEE, 0x06);
 }
 
 /*
@@ -155,15 +153,15 @@ void e_fuse_stage8() {
 uint8_t e_fuse_stage9() {
    
     // Table.20 List of E-Fuse program flow and setting value
-    DS_write(0xEF, 0x00); // add this though it's missing in 12-6 Example of E-Fuse Programming
-    DS_write(0xEC, 0xFF);
-    DS_write(0xEF, 0x03);
-    uint8_t check_value = DS_read(0x27);
+    DS_write(GP2Y0E,0xEF, 0x00); // add this though it's missing in 12-6 Example of E-Fuse Programming
+    DS_write(GP2Y0E,0xEC, 0xFF);
+    DS_write(GP2Y0E,0xEF, 0x03);
+    uint8_t check_value = DS_read(GP2Y0E,0x27);
     uint8_t check = check_value & 0x1f;
     // When lower 5bits data[4:0] is 00001, E-Fuse program is finished.
     // When lower 5bits data[4:0] is not 00001, go to stage10(bit replacement).
-    DS_write(0xEF, 0x00);
-    DS_write(0xEC, 0x7F);
+    DS_write(GP2Y0E,0xEF, 0x00);
+    DS_write(GP2Y0E,0xEC, 0x7F);
     if(check==0b00000001){
         return 1;
     }else{
@@ -172,7 +170,7 @@ uint8_t e_fuse_stage9() {
 }
 
 void e_fuse_stage10_1_1() {
-    DS_write(0xEC, 0xFF);
+    DS_write(GP2Y0E,0xEC, 0xFF);
     VDAC8_SetValue(206);
     //_vpp_on();
 }
@@ -184,7 +182,7 @@ void e_fuse_stage10_1_1() {
  */
 void e_fuse_stage10_2_1() {
 
-    DS_write(0xC8, 0x37);
+    DS_write(GP2Y0E,0xC8, 0x37);
 }
 
 /*
@@ -194,7 +192,7 @@ void e_fuse_stage10_2_1() {
  */
 void e_fuse_stage10_3_1() {
 
-    DS_write(0xC9, 0x74);
+    DS_write(GP2Y0E,0xC9, 0x74);
 }
 
 /*
@@ -204,7 +202,7 @@ void e_fuse_stage10_3_1() {
  */
 void e_fuse_stage10_4_1() {
 
-    DS_write(0xCD, 0x04);
+    DS_write(GP2Y0E,0xCD, 0x04);
 }
 
 /*
@@ -215,7 +213,7 @@ void e_fuse_stage10_4_1() {
  */
 void e_fuse_stage10_5_1() {
 
-    DS_write(0xCA, 0x01);
+    DS_write(GP2Y0E,0xCA, 0x01);
     CyDelayUs(500);
 }
 
@@ -226,7 +224,7 @@ void e_fuse_stage10_5_1() {
  * Vpp terminal is grounded.
  */
 void e_fuse_stage10_6_1() {
-    DS_write(0xCA, 0x00);
+    DS_write(GP2Y0E,0xCA, 0x00);
     VDAC8_SetValue(0);
     //_vpp_off();
 }
@@ -239,7 +237,7 @@ void e_fuse_stage10_6_1() {
  */
 void e_fuse_stage10_1_2() {
 
-    DS_write(0xEC, 0xFF);
+    DS_write(GP2Y0E,0xEC, 0xFF);
     VDAC8_SetValue(206);
     //_vpp_on();
 }
@@ -251,7 +249,7 @@ void e_fuse_stage10_1_2() {
  */
 void e_fuse_stage10_2_2() {
 
-    DS_write(0xC8, 0x3F);
+    DS_write(GP2Y0E,0xC8, 0x3F);
 }
 
 /*
@@ -261,7 +259,7 @@ void e_fuse_stage10_2_2() {
  */
 void e_fuse_stage10_3_2() {
 
-    DS_write(0xC9, 0x04);
+    DS_write(GP2Y0E,0xC9, 0x04);
 }
 
 /*
@@ -271,7 +269,7 @@ void e_fuse_stage10_3_2() {
  */
 void e_fuse_stage10_4_2() {
 
-    DS_write(0xCD, 0x01);
+    DS_write(GP2Y0E,0xCD, 0x01);
 }
 
 /*
@@ -282,7 +280,7 @@ void e_fuse_stage10_4_2() {
  */
 void e_fuse_stage10_5_2() {
 
-    DS_write(0xCA, 0x01);
+    DS_write(GP2Y0E,0xCA, 0x01);
     CyDelayUs(500);
 }
 
@@ -294,7 +292,7 @@ void e_fuse_stage10_5_2() {
  */
 void e_fuse_stage10_6_2() {
 
-    DS_write(0xCA, 0x00);
+    DS_write(GP2Y0E,0xCA, 0x00);
     VDAC8_SetValue(0);
 }
 
@@ -306,9 +304,9 @@ void e_fuse_stage10_6_2() {
  * Data=0x00 is set in Address=0xC8.
  */
 void e_fuse_stage10_7() {
-    DS_write(0xEF, 0x00);
-    DS_write(0xC8, 0x40);
-    DS_write(0xC8, 0x00);
+    DS_write(GP2Y0E,0xEF, 0x00);
+    DS_write(GP2Y0E,0xC8, 0x40);
+    DS_write(GP2Y0E,0xC8, 0x00);
 }
 
 /*
@@ -318,7 +316,7 @@ void e_fuse_stage10_7() {
  */
 void e_fuse_stage10_8() {
 
-    DS_write(0xEE, 0x06);
+    DS_write(GP2Y0E,0xEE, 0x06);
 }
 
 /*
@@ -329,10 +327,11 @@ void e_fuse_stage10_8() {
  * Read out the data in Address=0x18 and Address=0x19.
  */
 void e_fuse_stage10_9() {
-    DS_write(0xEC, 0xFF);
-    DS_write(0xEF, 0x03);
-    const uint8_t bit_replacemnt_18 = DS_read(0x18);
-    const uint8_t bit_replacemnt_19 = DS_read(0x19);
+    char buffer[12]={};
+    DS_write(GP2Y0E,0xEC, 0xFF);
+    DS_write(GP2Y0E,0xEF, 0x03);
+    const uint8_t bit_replacemnt_18 = DS_read(GP2Y0E,0x18);
+    const uint8_t bit_replacemnt_19 = DS_read(GP2Y0E,0x19);
     sprintf(buffer,"Check 0x18 => %d\r\n", bit_replacemnt_18);
     UART_PutString(buffer);
     sprintf(buffer,"Check 0x19 => %d\r\n", bit_replacemnt_19);
@@ -347,6 +346,7 @@ void e_fuse_stage10_9() {
 }
 
 void Ds_change( uint8_t new_address) {
+    char buffer[12]={};
     if (new_address == GP2Y0E) {
         UART_PutString("[ERROR] The new address must be other than 0x08!\r\n");
         return;
@@ -396,20 +396,20 @@ void Ds_change( uint8_t new_address) {
     UART_PutString(buffer);
 }
 
-unsigned char DS_get_data(){   
+unsigned char DS_get_data(char sladress){   
     unsigned char distance_cm,    datai2c[2]={0,0};
-    DS_beginwrite();
+    DS_beginwrite(sladress);            // inicia comunicacion
     I2C_MasterWriteByte(DISTANCE_ADDR1);//Pone direccion de memoria que quiere leer 
     I2C_MasterSendStop(); 
-    DS_beginread();
-    datai2c[0]=I2C_MasterReadByte(I2C_NAK_DATA);//lo codifica en ascci
-    datai2c[1]=I2C_MasterReadByte(I2C_NAK_DATA);
+    DS_beginread(sladress);
+    datai2c[0]=I2C_MasterReadByte(I2C_NAK_DATA);//captura el dato 1 con nak salta un registro para leer el siguiente espacio de memoria
+    datai2c[1]=I2C_MasterReadByte(I2C_NAK_DATA);// lee el siguiente espacio de memoria
     I2C_MasterSendStop();
     distance_cm = (datai2c[0]*16+datai2c[1])/64;//calculo de distancia
     return distance_cm;
 }
-void DS_range(char distance){
-    DS_beginwrite();
+void DS_range(char adress,char distance){
+    DS_beginwrite(adress);
     I2C_MasterWriteByte(SHIFT_ADDR);
     if(distance==0x80){
         I2C_MasterWriteByte(0x01);

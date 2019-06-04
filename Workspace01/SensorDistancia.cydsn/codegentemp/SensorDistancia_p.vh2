@@ -1,5 +1,5 @@
 -- Project:   SensorDistancia
--- Generated: 06/01/2019 23:03:31
+-- Generated: 06/04/2019 15:12:58
 -- PSoC Creator  4.2
 
 ENTITY SensorDistancia IS

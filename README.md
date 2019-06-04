@@ -12,25 +12,29 @@ La visualizacion de información se debe realizar con una consola serial, para e
 #include "project.h"
 #include <string.h>
 #include <stdio.h>
+#include <stdbool.h>
 #include "GP2Y0E03.h"
+#define GP2Y0Ed          0x40//default
 
-char buffer[12]={};
+char buffer2[12]={};
 
 
 int main(void)
 {
+    /*Instancia lo modulos */
     CyGlobalIntEnable; /* Enable global interrupts. */
     /*Inicia los Modulos */
     UART_Start(); 
-    I2C_Start();
+    IRQRX_StartEx(InterrupRx);
     UART_PutString("Iniciando\r\n");
-    DS_init();//Inicia sensor de distancia    
+    DS_init(GP2Y0Ed);//Inicia sensor de distancia
+    
+    
     for(;;)
     {
-	sprintf(buffer,"Distancia: %d\n\r",DS_get_data());
-	UART_PutString(buffer);
+    sprintf(buffer2,"Distancia 1: %d\n\r",DS_get_data(GP2Y0Ed));
+	UART_PutString(buffer2);
 	CyDelay(1000);
-    // velocidad de sensado
         
     }
 }
@@ -42,19 +46,17 @@ int main(void)
 #include "project.h"
 #include <string.h>
 #include <stdio.h>
+#include <stdbool.h>
 #include "GP2Y0E03.h"
-
-char buffer[12]={};
-
+#define GP2Y0Ed          0x40//default
 
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
     /*Inicia los Modulos */
     UART_Start(); 
-    I2C_Start();
     UART_PutString("Iniciando\r\n");
-    DS_init();//Inicia sensor de distancia
+    DS_init(GP2Y0Ed);//Inicia sensor de distancia
     UART_PutString("Iniciando Cambio de Direccion\r\n");
     Ds_change(0x00);//cambia direccion a la 0x10
     UART_PutString("Termino\r\n");    
@@ -71,8 +73,7 @@ int main(void)
 #include <string.h>
 #include <stdio.h>
 #include "GP2Y0E03.h"
-
-char buffer[12]={};
+#define GP2Y0Ed          0x40//default
 
 
 int main(void)
@@ -80,11 +81,10 @@ int main(void)
     CyGlobalIntEnable; /* Enable global interrupts. */
     /*Inicia los Modulos */
     UART_Start(); 
-    I2C_Start();
     UART_PutString("Iniciando\r\n");
     DS_init();//Inicia sensor de distancia
     UART_PutString("Iniciando Cambio de Direccion\r\n");
-    DS_range(0x80);//pone en 128 cm y cualquier otro parametro diferente de 0x80 la deja de 64 cm
+    DS_range(GP2Y0Ed,0x80);//pone en 128 cm y cualquier otro parametro diferente de 0x80 la deja de 64 cm
     UART_PutString("Termino\r\n");    
     for(;;)
     {
@@ -92,5 +92,43 @@ int main(void)
 }
 
 ```
+# Usar dos sensores en paralelo
+
+```
+#include "project.h"
+#include <string.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include "GP2Y0E03.h"
+#define GP2Y0Ed          0x40//default
+
+char buffer2[12]={};
 
 
+int main(void)
+{
+    /*Instancia lo modulos */
+    CyGlobalIntEnable; /* Enable global interrupts. */
+    /*Inicia los Modulos */
+    UART_Start(); 
+    IRQRX_StartEx(InterrupRx);
+    UART_PutString("Iniciando\r\n");
+    DS_init(GP2Y0Ed);//Inicia sensor de distancia
+    DS_init(0x60);
+    
+    
+    for(;;)
+    {
+    sprintf(buffer2,"Distancia 1: %d\n\r",DS_get_data(GP2Y0Ed));
+	UART_PutString(buffer2);
+	CyDelay(1000);
+    
+    sprintf(buffer2,"Distancia 2: %d\n\r",DS_get_data(0x60));
+	UART_PutString(buffer2);
+    CyDelay(1000);
+    // velocidad de sensado
+        
+    }
+}
+
+```
