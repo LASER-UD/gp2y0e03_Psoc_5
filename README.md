@@ -92,7 +92,7 @@ int main(void)
 }
 
 ```
-# Usar dos sensores en paralelo
+## Usar dos sensores en paralelo
 
 ```
 #include "project.h"
