@@ -10,15 +10,34 @@
 #include "GP2Y0E03.h"
 
 
-void DS_beginread (char sladress){
-        do{
-                //Espera mienstras el esclavo le responde
+bool DS_beginread (char sladress){
+    unsigned int cont=0;   
+    bool out=true;
+    do{
+            cont++;
+            if(cont==2000){
+                out=false;
+                UART_PutString("Tiempo exedido\r\n");
+                break;   
+            }
+            //Espera mienstras el esclavo le responde
         }while(I2C_MasterSendStart(sladress, I2C_READ_XFER_MODE)!=I2C_MSTR_NO_ERROR);
+        return out;
 }      //sladress= direccion del esclavo
-void DS_beginwrite(char sladress){
+bool DS_beginwrite(char sladress){
+    unsigned int cont=0;   
+    bool out=true;
         do{
+            cont++;
+            if(cont==2000){
+                out=false;
+                UART_PutString("Tiempo exedido\r\n");
+                break;   
+            }
+            
                 //Espera mienstras el esclavo le responde
     }while(I2C_MasterSendStart(sladress, I2C_WRITE_XFER_MODE)!=I2C_MSTR_NO_ERROR);
+    return out;
 }
 
 void DS_init(char sladress){
@@ -38,21 +57,25 @@ void DS_init(char sladress){
 
 
 char DS_read(char adress,char leer){                   
-    char data;
-    DS_beginwrite(adress);
-    I2C_MasterWriteByte(leer);//Pone direccion de memoria que quiere leer 
-    I2C_MasterSendStop(); 
-    DS_beginread(adress);
-    data=I2C_MasterReadByte(I2C_NAK_DATA);//lo codifica en ascci
-    I2C_MasterSendStop();
+    char data=0;
+    if(DS_beginwrite(adress)){
+        I2C_MasterWriteByte(leer);//Pone direccion de memoria que quiere leer 
+        I2C_MasterSendStop(); 
+        if(DS_beginread(adress)){
+            data=I2C_MasterReadByte(I2C_NAK_DATA);//lo codifica en ascci
+            I2C_MasterSendStop();
+        }
+    }
     return data;
 } //adress es el slave adress del dispositivo, leer es la direccion del registro que se desea ver
 
 void DS_write(char slvadr, char adress, char load){
-    DS_beginwrite(slvadr);
-    I2C_MasterWriteByte(adress);
-    I2C_MasterWriteByte(load);
-    I2C_MasterSendStop();
+    if(DS_beginwrite(slvadr)){
+        I2C_MasterWriteByte(adress);
+        I2C_MasterWriteByte(load);
+        I2C_MasterSendStop();
+    }
+    
 }
 
 void e_fuse_stage1() {

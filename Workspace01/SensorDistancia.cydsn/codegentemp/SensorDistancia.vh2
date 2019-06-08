@@ -2,7 +2,7 @@
 --	Conversion of SensorDistancia.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Jun 04 15:12:56 2019
+--	Sat Jun 08 13:40:32 2019
 --
 
 USE cypress.cypress.all;

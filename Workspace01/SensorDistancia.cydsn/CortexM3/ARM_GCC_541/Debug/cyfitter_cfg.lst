@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
   29:Generated_Source\PSoC5/cyfitter_cfg.c **** 
   30:Generated_Source\PSoC5/cyfitter_cfg.c **** #if defined(__GNUC__) || defined(__ARMCC_VERSION)
   31:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CYPACKED 
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 2
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 2
 
 
   32:Generated_Source\PSoC5/cyfitter_cfg.c ****     #define CYPACKED_ATTR __attribute__ ((packed))
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
   86:Generated_Source\PSoC5/cyfitter_cfg.c **** 	(void)memcpy(dest, src, n);
   87:Generated_Source\PSoC5/cyfitter_cfg.c **** }
   88:Generated_Source\PSoC5/cyfitter_cfg.c **** CY_CFG_UNUSED
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 3
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 3
 
 
   89:Generated_Source\PSoC5/cyfitter_cfg.c **** static void CYCONFIGCPYCODE(void *dest, const void *src, size_t n);
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
   41              		.thumb
   42              		.thumb_func
   43              		.type	cfg_write_bytes32, %function
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 4
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 4
 
 
   44              	cfg_write_bytes32:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  181:Generated_Source\PSoC5/cyfitter_cfg.c **** * Parameters:
  182:Generated_Source\PSoC5/cyfitter_cfg.c **** *   void
  183:Generated_Source\PSoC5/cyfitter_cfg.c **** *
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 5
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 5
 
 
  184:Generated_Source\PSoC5/cyfitter_cfg.c **** * Return:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
   83 001c 6D78     		ldrb	r5, [r5, #1]	@ zero_extendqisi2
   84 001e A555     		strb	r5, [r4, r6]
  201:Generated_Source\PSoC5/cyfitter_cfg.c **** 			j++;
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 6
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 6
 
 
   85              		.loc 1 201 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  214:Generated_Source\PSoC5/cyfitter_cfg.c **** *  clocks and setting the necessary dividers to produce the desired frequency. 
  215:Generated_Source\PSoC5/cyfitter_cfg.c **** *
  216:Generated_Source\PSoC5/cyfitter_cfg.c **** * Parameters:
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 7
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 7
 
 
  217:Generated_Source\PSoC5/cyfitter_cfg.c **** *  void
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  271:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  272:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  273:Generated_Source\PSoC5/cyfitter_cfg.c **** /*******************************************************************************
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 8
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 8
 
 
  274:Generated_Source\PSoC5/cyfitter_cfg.c **** * Function Name: AnalogSetDefault
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  155 002a 7047     		bx	lr
  156              	.L11:
  157              		.align	2
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 9
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 9
 
 
  158              	.L10:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  208              		.loc 1 231 0
  209 0002 4FF49C72 		mov	r2, #312
  210 0006 244B     		ldr	r3, .L20
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 10
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 10
 
 
  211 0008 1A80     		strh	r2, [r3]	@ movhi
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  255 0050 04F00304 		and	r4, r4, #3
  256              	.LVL20:
  250:Generated_Source\PSoC5/cyfitter_cfg.c **** 	}
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 11
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 11
 
 
  257              		.loc 1 250 0 discriminator 4
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  299              		.loc 1 266 0
  300 008c 094A     		ldr	r2, .L20+28
  301 008e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 12
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 12
 
 
  302 0090 43F00103 		orr	r3, r3, #1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  300:Generated_Source\PSoC5/cyfitter_cfg.c **** /*******************************************************************************
  301:Generated_Source\PSoC5/cyfitter_cfg.c **** * Function Name: SetAnalogRoutingPumps
  302:Generated_Source\PSoC5/cyfitter_cfg.c **** ********************************************************************************
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 13
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 13
 
 
  303:Generated_Source\PSoC5/cyfitter_cfg.c **** *
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  379              	.LFB8:
  329:Generated_Source\PSoC5/cyfitter_cfg.c **** }
  330:Generated_Source\PSoC5/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 14
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 14
 
 
  331:Generated_Source\PSoC5/cyfitter_cfg.c **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  361:Generated_Source\PSoC5/cyfitter_cfg.c **** 	{
  362:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  363:Generated_Source\PSoC5/cyfitter_cfg.c **** 		CYPACKED typedef struct {
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 15
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 15
 
 
  364:Generated_Source\PSoC5/cyfitter_cfg.c **** 			void CYFAR *address;
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  420 0024 FFF7FEFF 		bl	CYMEMZERO
  421              	.LVL31:
  422              	.LBE4:
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 16
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 16
 
 
  398:Generated_Source\PSoC5/cyfitter_cfg.c **** 		{
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  412:Generated_Source\PSoC5/cyfitter_cfg.c **** 		}
  413:Generated_Source\PSoC5/cyfitter_cfg.c **** 
  414:Generated_Source\PSoC5/cyfitter_cfg.c **** 		cfg_write_bytes32(cy_cfg_addr_table, cy_cfg_data_table);
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 17
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 17
 
 
  463              		.loc 1 414 0 is_stmt 1
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  429:Generated_Source\PSoC5/cyfitter_cfg.c **** 	CYCONFIGCPY((void CYFAR *)(CYREG_PRT3_DR), (const void CYFAR *)(BS_IOPINS0_3_VAL), 10u);
  503              		.loc 1 429 0
  504 009a 0A22     		movs	r2, #10
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 18
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 18
 
 
  505 009c 1649     		ldr	r1, .L33+36
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  543 00dc 50000048 		.word	1207959632
  544 00e0 03500140 		.word	1073827843
  545 00e4 A0430040 		.word	1073759136
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 19
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 19
 
 
  546 00e8 54030048 		.word	1207960404
@@ -1138,16 +1138,16 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  600              	.Ldebug_info0:
  601 0000 91050000 		.4byte	0x591
  602 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 20
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 20
 
 
  603 0006 00000000 		.4byte	.Ldebug_abbrev0
  604 000a 04       		.byte	0x4
  605 000b 01       		.uleb128 0x1
- 606 000c 24020000 		.4byte	.LASF52
+ 606 000c 22020000 		.4byte	.LASF52
  607 0010 0C       		.byte	0xc
- 608 0011 11030000 		.4byte	.LASF53
- 609 0015 ED000000 		.4byte	.LASF54
+ 608 0011 0F030000 		.4byte	.LASF53
+ 609 0015 9B000000 		.4byte	.LASF54
  610 0019 00000000 		.4byte	.Ldebug_ranges0+0
  611 001d 00000000 		.4byte	0
  612 0021 00000000 		.4byte	.Ldebug_line0
@@ -1163,7 +1163,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  622 0037 04       		.uleb128 0x4
  623 0038 04       		.byte	0x4
  624 0039 07       		.byte	0x7
- 625 003a 4D010000 		.4byte	.LASF0
+ 625 003a 4B010000 		.4byte	.LASF0
  626 003e 04       		.uleb128 0x4
  627 003f 08       		.byte	0x8
  628 0040 05       		.byte	0x5
@@ -1171,7 +1171,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  630 0045 04       		.uleb128 0x4
  631 0046 08       		.byte	0x8
  632 0047 04       		.byte	0x4
- 633 0048 AB010000 		.4byte	.LASF2
+ 633 0048 A9010000 		.4byte	.LASF2
  634 004c 04       		.uleb128 0x4
  635 004d 01       		.byte	0x1
  636 004e 06       		.byte	0x6
@@ -1179,26 +1179,26 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  638 0053 04       		.uleb128 0x4
  639 0054 01       		.byte	0x1
  640 0055 08       		.byte	0x8
- 641 0056 0C020000 		.4byte	.LASF4
+ 641 0056 0A020000 		.4byte	.LASF4
  642 005a 04       		.uleb128 0x4
  643 005b 02       		.byte	0x2
  644 005c 05       		.byte	0x5
- 645 005d 1A020000 		.4byte	.LASF5
+ 645 005d 18020000 		.4byte	.LASF5
  646 0061 04       		.uleb128 0x4
  647 0062 02       		.byte	0x2
  648 0063 07       		.byte	0x7
- 649 0064 8F010000 		.4byte	.LASF6
+ 649 0064 8D010000 		.4byte	.LASF6
  650 0068 04       		.uleb128 0x4
  651 0069 04       		.byte	0x4
  652 006a 05       		.byte	0x5
- 653 006b B0000000 		.4byte	.LASF7
+ 653 006b 08010000 		.4byte	.LASF7
  654 006f 04       		.uleb128 0x4
  655 0070 04       		.byte	0x4
  656 0071 07       		.byte	0x7
- 657 0072 63010000 		.4byte	.LASF8
+ 657 0072 61010000 		.4byte	.LASF8
  658 0076 04       		.uleb128 0x4
  659 0077 08       		.byte	0x8
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 21
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 21
 
 
  660 0078 07       		.byte	0x7
@@ -1206,15 +1206,15 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  662 007d 04       		.uleb128 0x4
  663 007e 04       		.byte	0x4
  664 007f 07       		.byte	0x7
- 665 0080 A2010000 		.4byte	.LASF10
+ 665 0080 A0010000 		.4byte	.LASF10
  666 0084 05       		.uleb128 0x5
  667 0085 04       		.byte	0x4
  668 0086 04       		.uleb128 0x4
  669 0087 01       		.byte	0x1
  670 0088 08       		.byte	0x8
- 671 0089 CD020000 		.4byte	.LASF11
+ 671 0089 CB020000 		.4byte	.LASF11
  672 008d 06       		.uleb128 0x6
- 673 008e C6000000 		.4byte	.LASF13
+ 673 008e 1E010000 		.4byte	.LASF13
  674 0092 03       		.byte	0x3
  675 0093 E401     		.2byte	0x1e4
  676 0095 53000000 		.4byte	0x53
@@ -1224,27 +1224,27 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  680 009f E501     		.2byte	0x1e5
  681 00a1 61000000 		.4byte	0x61
  682 00a5 06       		.uleb128 0x6
- 683 00a6 DD000000 		.4byte	.LASF15
+ 683 00a6 35010000 		.4byte	.LASF15
  684 00aa 03       		.byte	0x3
  685 00ab E601     		.2byte	0x1e6
  686 00ad 6F000000 		.4byte	0x6f
  687 00b1 04       		.uleb128 0x4
  688 00b2 04       		.byte	0x4
  689 00b3 04       		.byte	0x4
- 690 00b4 EB010000 		.4byte	.LASF16
+ 690 00b4 E9010000 		.4byte	.LASF16
  691 00b8 04       		.uleb128 0x4
  692 00b9 08       		.byte	0x8
  693 00ba 04       		.byte	0x4
- 694 00bb CC000000 		.4byte	.LASF17
+ 694 00bb 24010000 		.4byte	.LASF17
  695 00bf 06       		.uleb128 0x6
- 696 00c0 07020000 		.4byte	.LASF18
+ 696 00c0 05020000 		.4byte	.LASF18
  697 00c4 03       		.byte	0x3
  698 00c5 8E02     		.2byte	0x28e
  699 00c7 CB000000 		.4byte	0xcb
  700 00cb 07       		.uleb128 0x7
  701 00cc 8D000000 		.4byte	0x8d
  702 00d0 06       		.uleb128 0x6
- 703 00d1 B9000000 		.4byte	.LASF19
+ 703 00d1 11010000 		.4byte	.LASF19
  704 00d5 03       		.byte	0x3
  705 00d6 8F02     		.2byte	0x28f
  706 00d8 DC000000 		.4byte	0xdc
@@ -1256,23 +1256,23 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  712 00e4 98       		.byte	0x98
  713 00e5 02010000 		.4byte	0x102
  714 00e9 09       		.uleb128 0x9
- 715 00ea EF020000 		.4byte	.LASF20
+ 715 00ea ED020000 		.4byte	.LASF20
  716 00ee 01       		.byte	0x1
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 22
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 22
 
 
  717 00ef 9A       		.byte	0x9a
  718 00f0 8D000000 		.4byte	0x8d
  719 00f4 00       		.byte	0
  720 00f5 09       		.uleb128 0x9
- 721 00f6 47010000 		.4byte	.LASF21
+ 721 00f6 45010000 		.4byte	.LASF21
  722 00fa 01       		.byte	0x1
  723 00fb 9B       		.byte	0x9b
  724 00fc 8D000000 		.4byte	0x8d
  725 0100 01       		.byte	0x1
  726 0101 00       		.byte	0
  727 0102 03       		.uleb128 0x3
- 728 0103 BA020000 		.4byte	.LASF22
+ 728 0103 B8020000 		.4byte	.LASF22
  729 0107 01       		.byte	0x1
  730 0108 9C       		.byte	0x9c
  731 0109 E1000000 		.4byte	0xe1
@@ -1286,7 +1286,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  739 011d 9C       		.byte	0x9c
  740 011e 30010000 		.4byte	0x130
  741 0122 0B       		.uleb128 0xb
- 742 0123 A6000000 		.4byte	.LASF23
+ 742 0123 FE000000 		.4byte	.LASF23
  743 0127 01       		.byte	0x1
  744 0128 7F       		.byte	0x7f
  745 0129 8D000000 		.4byte	0x8d
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  771 015e 51       		.byte	0x51
  772 015f 0D       		.uleb128 0xd
  773 0160 6900     		.ascii	"i\000"
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 23
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 23
 
 
  774 0162 01       		.byte	0x1
@@ -1368,17 +1368,17 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  818 01c9 9C       		.byte	0x9c
  819 01ca DF010000 		.4byte	0x1df
  820 01ce 13       		.uleb128 0x13
- 821 01cf B7010000 		.4byte	.LASF30
+ 821 01cf B5010000 		.4byte	.LASF30
  822 01d3 01       		.byte	0x1
  823 01d4 2301     		.2byte	0x123
  824 01d6 8D000000 		.4byte	0x8d
  825 01da 6F000000 		.4byte	.LLST4
  826 01de 00       		.byte	0
  827 01df 0C       		.uleb128 0xc
- 828 01e0 D3000000 		.4byte	.LASF31
+ 828 01e0 2B010000 		.4byte	.LASF31
  829 01e4 01       		.byte	0x1
  830 01e5 4D       		.byte	0x4d
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 24
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 24
 
 
  831 01e6 00000000 		.4byte	.LFB0
@@ -1423,7 +1423,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  870 022a 00       		.byte	0
  871 022b 00       		.byte	0
  872 022c 0C       		.uleb128 0xc
- 873 022d 9B000000 		.4byte	.LASF32
+ 873 022d F3000000 		.4byte	.LASF32
  874 0231 01       		.byte	0x1
  875 0232 E0       		.byte	0xe0
  876 0233 00000000 		.4byte	.LFB5
@@ -1432,16 +1432,16 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  879 023c 9C       		.byte	0x9c
  880 023d 84020000 		.4byte	0x284
  881 0241 0F       		.uleb128 0xf
- 882 0242 75010000 		.4byte	.LASF33
+ 882 0242 73010000 		.4byte	.LASF33
  883 0246 01       		.byte	0x1
  884 0247 E2       		.byte	0xe2
  885 0248 A5000000 		.4byte	0xa5
  886 024c CF000000 		.4byte	.LLST7
  887 0250 0F       		.uleb128 0xf
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 25
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 25
 
 
- 888 0251 B2020000 		.4byte	.LASF34
+ 888 0251 B0020000 		.4byte	.LASF34
  889 0255 01       		.byte	0x1
  890 0256 E3       		.byte	0xe3
  891 0257 8D000000 		.4byte	0x8d
@@ -1468,7 +1468,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  912 0282 00       		.byte	0
  913 0283 00       		.byte	0
  914 0284 0C       		.uleb128 0xc
- 915 0285 05030000 		.4byte	.LASF35
+ 915 0285 03030000 		.4byte	.LASF35
  916 0289 01       		.byte	0x1
  917 028a 54       		.byte	0x54
  918 028b 00000000 		.4byte	.LFB1
@@ -1477,7 +1477,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  921 0294 9C       		.byte	0x9c
  922 0295 E4020000 		.4byte	0x2e4
  923 0299 18       		.uleb128 0x18
- 924 029a E6010000 		.4byte	.LASF36
+ 924 029a E4010000 		.4byte	.LASF36
  925 029e 01       		.byte	0x1
  926 029f 54       		.byte	0x54
  927 02a0 84000000 		.4byte	0x84
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  942 02c5 06000000 		.4byte	.LVL26
  943 02c9 8B050000 		.4byte	0x58b
  944 02cd 16       		.uleb128 0x16
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 26
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 26
 
 
  945 02ce 01       		.uleb128 0x1
@@ -1528,7 +1528,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  969 02e6 EA020000 		.4byte	0x2ea
  970 02ea 19       		.uleb128 0x19
  971 02eb 1A       		.uleb128 0x1a
- 972 02ec D9020000 		.4byte	.LASF39
+ 972 02ec D7020000 		.4byte	.LASF39
  973 02f0 01       		.byte	0x1
  974 02f1 3D01     		.2byte	0x13d
  975 02f3 00000000 		.4byte	.LFB7
@@ -1537,14 +1537,14 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  978 02fc 9C       		.byte	0x9c
  979 02fd 1E030000 		.4byte	0x31e
  980 0301 1B       		.uleb128 0x1b
- 981 0302 F6020000 		.4byte	.LASF37
+ 981 0302 F4020000 		.4byte	.LASF37
  982 0306 01       		.byte	0x1
  983 0307 3D01     		.2byte	0x13d
  984 0309 8D000000 		.4byte	0x8d
  985 030d 01       		.uleb128 0x1
  986 030e 50       		.byte	0x50
  987 030f 1C       		.uleb128 0x1c
- 988 0310 E4000000 		.4byte	.LASF38
+ 988 0310 3C010000 		.4byte	.LASF38
  989 0314 01       		.byte	0x1
  990 0315 3F01     		.2byte	0x13f
  991 0317 8D000000 		.4byte	0x8d
@@ -1552,13 +1552,13 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  993 031c 53       		.byte	0x53
  994 031d 00       		.byte	0
  995 031e 1A       		.uleb128 0x1a
- 996 031f 4F030000 		.4byte	.LASF40
+ 996 031f 4D030000 		.4byte	.LASF40
  997 0323 01       		.byte	0x1
  998 0324 5F01     		.2byte	0x15f
  999 0326 00000000 		.4byte	.LFB8
  1000 032a 10010000 		.4byte	.LFE8-.LFB8
  1001 032e 01       		.uleb128 0x1
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 27
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 27
 
 
  1002 032f 9C       		.byte	0x9c
@@ -1573,20 +1573,20 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1011 0344 6B01     		.2byte	0x16b
  1012 0346 65030000 		.4byte	0x365
  1013 034a 1F       		.uleb128 0x1f
- 1014 034b 37030000 		.4byte	.LASF41
+ 1014 034b 35030000 		.4byte	.LASF41
  1015 034f 01       		.byte	0x1
  1016 0350 6C01     		.2byte	0x16c
  1017 0352 84000000 		.4byte	0x84
  1018 0356 00       		.byte	0
  1019 0357 1F       		.uleb128 0x1f
- 1020 0358 8A010000 		.4byte	.LASF42
+ 1020 0358 88010000 		.4byte	.LASF42
  1021 035c 01       		.byte	0x1
  1022 035d 6D01     		.2byte	0x16d
  1023 035f 99000000 		.4byte	0x99
  1024 0363 04       		.byte	0x4
  1025 0364 00       		.byte	0
  1026 0365 06       		.uleb128 0x6
- 1027 0366 C9010000 		.4byte	.LASF43
+ 1027 0366 C7010000 		.4byte	.LASF43
  1028 036a 01       		.byte	0x1
  1029 036b 6E01     		.2byte	0x16e
  1030 036d 41030000 		.4byte	0x341
@@ -1596,7 +1596,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1034 0374 7101     		.2byte	0x171
  1035 0376 A2030000 		.4byte	0x3a2
  1036 037a 1F       		.uleb128 0x1f
- 1037 037b E6010000 		.4byte	.LASF36
+ 1037 037b E4010000 		.4byte	.LASF36
  1038 037f 01       		.byte	0x1
  1039 0380 7201     		.2byte	0x172
  1040 0382 84000000 		.4byte	0x84
@@ -1608,17 +1608,17 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1046 038f E4020000 		.4byte	0x2e4
  1047 0393 04       		.byte	0x4
  1048 0394 1F       		.uleb128 0x1f
- 1049 0395 8A010000 		.4byte	.LASF42
+ 1049 0395 88010000 		.4byte	.LASF42
  1050 0399 01       		.byte	0x1
  1051 039a 7401     		.2byte	0x174
  1052 039c 99000000 		.4byte	0x99
  1053 03a0 08       		.byte	0x8
  1054 03a1 00       		.byte	0
  1055 03a2 06       		.uleb128 0x6
- 1056 03a3 7D010000 		.4byte	.LASF44
+ 1056 03a3 7B010000 		.4byte	.LASF44
  1057 03a7 01       		.byte	0x1
  1058 03a8 7501     		.2byte	0x175
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 28
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 28
 
 
  1059 03aa 71030000 		.4byte	0x371
@@ -1632,7 +1632,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1067 03be 11       		.uleb128 0x11
  1068 03bf 65030000 		.4byte	0x365
  1069 03c3 1C       		.uleb128 0x1c
- 1070 03c4 D6010000 		.4byte	.LASF45
+ 1070 03c4 D4010000 		.4byte	.LASF45
  1071 03c8 01       		.byte	0x1
  1072 03c9 7701     		.2byte	0x177
  1073 03cb D5030000 		.4byte	0x3d5
@@ -1651,7 +1651,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1086 03ea 11       		.uleb128 0x11
  1087 03eb A2030000 		.4byte	0x3a2
  1088 03ef 1C       		.uleb128 0x1c
- 1089 03f0 3F030000 		.4byte	.LASF46
+ 1089 03f0 3D030000 		.4byte	.LASF46
  1090 03f4 01       		.byte	0x1
  1091 03f5 8601     		.2byte	0x186
  1092 03f7 01040000 		.4byte	0x401
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1113 042c BB010000 		.4byte	.LLST13
  1114 0430 10       		.uleb128 0x10
  1115 0431 04       		.byte	0x4
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 29
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 29
 
 
  1116 0432 BE030000 		.4byte	0x3be
@@ -1724,21 +1724,21 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1156 0476 04       		.byte	0x4
  1157 0477 EA030000 		.4byte	0x3ea
  1158 047b 13       		.uleb128 0x13
- 1159 047c FF010000 		.4byte	.LASF47
+ 1159 047c FD010000 		.4byte	.LASF47
  1160 0480 01       		.byte	0x1
  1161 0481 9801     		.2byte	0x198
  1162 0483 84000000 		.4byte	0x84
  1163 0487 1F020000 		.4byte	.LLST15
  1164 048b 13       		.uleb128 0x13
- 1165 048c D2020000 		.4byte	.LASF48
+ 1165 048c D0020000 		.4byte	.LASF48
  1166 0490 01       		.byte	0x1
  1167 0491 9901     		.2byte	0x199
  1168 0493 E4020000 		.4byte	0x2e4
  1169 0497 32020000 		.4byte	.LLST16
  1170 049b 13       		.uleb128 0x13
- 1171 049c 5A010000 		.4byte	.LASF49
+ 1171 049c 58010000 		.4byte	.LASF49
  1172 04a0 01       		.byte	0x1
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 30
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 30
 
 
  1173 04a1 9A01     		.2byte	0x19a
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1227 04fc 17       		.uleb128 0x17
  1228 04fd 9A000000 		.4byte	.LVL45
  1229 0501 84020000 		.4byte	0x284
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 31
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 31
 
 
  1230 0505 21050000 		.4byte	0x521
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1284 0565 0C       		.byte	0xc
  1285 0566 B0430040 		.4byte	0x400043b0
  1286 056a 16       		.uleb128 0x16
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 32
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 32
 
 
  1287 056b 01       		.uleb128 0x1
@@ -1874,16 +1874,16 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1297 0575 00       		.byte	0
  1298 0576 00       		.byte	0
  1299 0577 25       		.uleb128 0x25
- 1300 0578 FE020000 		.4byte	.LASF50
- 1301 057c FE020000 		.4byte	.LASF50
+ 1300 0578 FC020000 		.4byte	.LASF50
+ 1301 057c FC020000 		.4byte	.LASF50
  1302 0580 26       		.uleb128 0x26
- 1303 0581 F1010000 		.4byte	.LASF56
- 1304 0585 F1010000 		.4byte	.LASF56
+ 1303 0581 EF010000 		.4byte	.LASF56
+ 1304 0585 EF010000 		.4byte	.LASF56
  1305 0589 04       		.byte	0x4
  1306 058a 79       		.byte	0x79
  1307 058b 25       		.uleb128 0x25
- 1308 058c BF000000 		.4byte	.LASF51
- 1309 0590 BF000000 		.4byte	.LASF51
+ 1308 058c 17010000 		.4byte	.LASF51
+ 1309 0590 17010000 		.4byte	.LASF51
  1310 0594 00       		.byte	0
  1311              		.section	.debug_abbrev,"",%progbits
  1312              	.Ldebug_abbrev0:
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1341 001c 00       		.byte	0
  1342 001d 00       		.byte	0
  1343 001e 03       		.uleb128 0x3
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 33
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 33
 
 
  1344 001f 16       		.uleb128 0x16
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1398 0055 0B       		.uleb128 0xb
  1399 0056 3A       		.uleb128 0x3a
  1400 0057 0B       		.uleb128 0xb
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 34
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 34
 
 
  1401 0058 3B       		.uleb128 0x3b
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1455 0090 0B       		.uleb128 0xb
  1456 0091 49       		.uleb128 0x49
  1457 0092 13       		.uleb128 0x13
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 35
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 35
 
 
  1458 0093 02       		.uleb128 0x2
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1512 00ca 03       		.uleb128 0x3
  1513 00cb 0E       		.uleb128 0xe
  1514 00cc 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 36
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 36
 
 
  1515 00cd 0B       		.uleb128 0xb
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1569 0104 0B       		.uleb128 0xb
  1570 0105 3B       		.uleb128 0x3b
  1571 0106 05       		.uleb128 0x5
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 37
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 37
 
 
  1572 0107 49       		.uleb128 0x49
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1626 0144 0E       		.uleb128 0xe
  1627 0145 3A       		.uleb128 0x3a
  1628 0146 0B       		.uleb128 0xb
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 38
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 38
 
 
  1629 0147 3B       		.uleb128 0x3b
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1683 017e 34       		.uleb128 0x34
  1684 017f 00       		.byte	0
  1685 0180 03       		.uleb128 0x3
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 39
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 39
 
 
  1686 0181 0E       		.uleb128 0xe
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1740 01b7 08       		.uleb128 0x8
  1741 01b8 3A       		.uleb128 0x3a
  1742 01b9 0B       		.uleb128 0xb
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 40
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 40
 
 
  1743 01ba 3B       		.uleb128 0x3b
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1797 01f2 19       		.uleb128 0x19
  1798 01f3 3C       		.uleb128 0x3c
  1799 01f4 19       		.uleb128 0x19
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 41
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 41
 
 
  1800 01f5 6E       		.uleb128 0x6e
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1854 0048 56       		.byte	0x56
  1855 0049 00000000 		.4byte	0
  1856 004d 00000000 		.4byte	0
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 42
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 42
 
 
  1857              	.LLST3:
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1911 00d9 49       		.byte	0x49
  1912 00da 9F       		.byte	0x9f
  1913 00db 44000000 		.4byte	.LVL18
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 43
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 43
 
 
  1914 00df 98000000 		.4byte	.LVL24
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  1968 0165 05000000 		.4byte	.LVL26-1
  1969 0169 08000000 		.4byte	.LFE1
  1970 016d 0400     		.2byte	0x4
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 44
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 44
 
 
  1971 016f F3       		.byte	0xf3
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  2025 01e9 00000000 		.4byte	0
  2026              	.LLST14:
  2027 01ed 34000000 		.4byte	.LVL35
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 45
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 45
 
 
  2028 01f1 4A000000 		.4byte	.LVL40
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  2082 0010 00000000 		.4byte	.LFB3
  2083 0014 02000000 		.4byte	.LFE3-.LFB3
  2084 0018 00000000 		.4byte	.LFB4
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 46
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 46
 
 
  2085 001c 34000000 		.4byte	.LFE4-.LFB4
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  2130      5F7400
  2131              	.LASF55:
  2132 001d 4379436C 		.ascii	"CyClockStartupError\000"
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 47
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 47
 
 
  2132      6F636B53 
@@ -2800,215 +2800,215 @@ ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 1
  2146      655F6279 
  2146      74657333 
  2146      3200
- 2147              	.LASF32:
- 2148 009b 436C6F63 		.ascii	"ClockSetup\000"
- 2148      6B536574 
- 2148      757000
- 2149              	.LASF23:
- 2150 00a6 6572726F 		.ascii	"errorCode\000"
- 2150      72436F64 
- 2150      6500
- 2151              	.LASF7:
- 2152 00b0 6C6F6E67 		.ascii	"long int\000"
- 2152      20696E74 
- 2152      00
- 2153              	.LASF19:
- 2154 00b9 72656731 		.ascii	"reg16\000"
- 2154      3600
- 2155              	.LASF51:
- 2156 00bf 6D656D63 		.ascii	"memcpy\000"
- 2156      707900
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 48
+ 2147              	.LASF54:
+ 2148 009b 433A5C55 		.ascii	"C:\\Users\\nikod\\Documents\\PSoC Creator\\gp2y0e03"
+ 2148      73657273 
+ 2148      5C6E696B 
+ 2148      6F645C44 
+ 2148      6F63756D 
+ 2149 00c9 5F50736F 		.ascii	"_Psoc_5\\Workspace01\\SensorDistancia.cydsn\000"
+ 2149      635F355C 
+ 2149      576F726B 
+ 2149      73706163 
+ 2149      6530315C 
+ 2150              	.LASF32:
+ 2151 00f3 436C6F63 		.ascii	"ClockSetup\000"
+ 2151      6B536574 
+ 2151      757000
+ 2152              	.LASF23:
+ 2153 00fe 6572726F 		.ascii	"errorCode\000"
+ 2153      72436F64 
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 48
 
 
- 2157              	.LASF13:
- 2158 00c6 75696E74 		.ascii	"uint8\000"
- 2158      3800
- 2159              	.LASF17:
- 2160 00cc 646F7562 		.ascii	"double\000"
- 2160      6C6500
- 2161              	.LASF31:
- 2162 00d3 43594D45 		.ascii	"CYMEMZERO\000"
- 2162      4D5A4552 
- 2162      4F00
- 2163              	.LASF15:
- 2164 00dd 75696E74 		.ascii	"uint32\000"
- 2164      333200
- 2165              	.LASF38:
- 2166 00e4 72656756 		.ascii	"regValue\000"
- 2166      616C7565 
- 2166      00
- 2167              	.LASF54:
- 2168 00ed 433A5C55 		.ascii	"C:\\Users\\LASER_2\\Documents\\PSoC Creator\\gp2y0e"
- 2168      73657273 
- 2168      5C4C4153 
- 2168      45525F32 
- 2168      5C446F63 
- 2169 011b 30335F50 		.ascii	"03_Psoc_5\\Workspace01\\SensorDistancia.cydsn\000"
- 2169      736F635F 
- 2169      355C576F 
- 2169      726B7370 
- 2169      61636530 
+ 2153      6500
+ 2154              	.LASF7:
+ 2155 0108 6C6F6E67 		.ascii	"long int\000"
+ 2155      20696E74 
+ 2155      00
+ 2156              	.LASF19:
+ 2157 0111 72656731 		.ascii	"reg16\000"
+ 2157      3600
+ 2158              	.LASF51:
+ 2159 0117 6D656D63 		.ascii	"memcpy\000"
+ 2159      707900
+ 2160              	.LASF13:
+ 2161 011e 75696E74 		.ascii	"uint8\000"
+ 2161      3800
+ 2162              	.LASF17:
+ 2163 0124 646F7562 		.ascii	"double\000"
+ 2163      6C6500
+ 2164              	.LASF31:
+ 2165 012b 43594D45 		.ascii	"CYMEMZERO\000"
+ 2165      4D5A4552 
+ 2165      4F00
+ 2166              	.LASF15:
+ 2167 0135 75696E74 		.ascii	"uint32\000"
+ 2167      333200
+ 2168              	.LASF38:
+ 2169 013c 72656756 		.ascii	"regValue\000"
+ 2169      616C7565 
+ 2169      00
  2170              	.LASF21:
- 2171 0147 76616C75 		.ascii	"value\000"
+ 2171 0145 76616C75 		.ascii	"value\000"
  2171      6500
  2172              	.LASF0:
- 2173 014d 756E7369 		.ascii	"unsigned int\000"
+ 2173 014b 756E7369 		.ascii	"unsigned int\000"
  2173      676E6564 
  2173      20696E74 
  2173      00
  2174              	.LASF49:
- 2175 015a 6E756D42 		.ascii	"numBytes\000"
+ 2175 0158 6E756D42 		.ascii	"numBytes\000"
  2175      79746573 
  2175      00
  2176              	.LASF8:
- 2177 0163 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2177 0161 6C6F6E67 		.ascii	"long unsigned int\000"
  2177      20756E73 
  2177      69676E65 
  2177      6420696E 
  2177      7400
  2178              	.LASF33:
- 2179 0175 74696D65 		.ascii	"timeout\000"
+ 2179 0173 74696D65 		.ascii	"timeout\000"
  2179      6F757400 
  2180              	.LASF44:
- 2181 017d 6366675F 		.ascii	"cfg_memcpy_t\000"
+ 2181 017b 6366675F 		.ascii	"cfg_memcpy_t\000"
  2181      6D656D63 
  2181      70795F74 
  2181      00
  2182              	.LASF42:
- 2183 018a 73697A65 		.ascii	"size\000"
+ 2183 0188 73697A65 		.ascii	"size\000"
  2183      00
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 49
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 49
 
 
  2184              	.LASF6:
- 2185 018f 73686F72 		.ascii	"short unsigned int\000"
+ 2185 018d 73686F72 		.ascii	"short unsigned int\000"
  2185      7420756E 
  2185      7369676E 
  2185      65642069 
  2185      6E7400
  2186              	.LASF10:
- 2187 01a2 73697A65 		.ascii	"sizetype\000"
+ 2187 01a0 73697A65 		.ascii	"sizetype\000"
  2187      74797065 
  2187      00
  2188              	.LASF2:
- 2189 01ab 6C6F6E67 		.ascii	"long double\000"
+ 2189 01a9 6C6F6E67 		.ascii	"long double\000"
  2189      20646F75 
  2189      626C6500 
  2190              	.LASF30:
- 2191 01b7 62675F78 		.ascii	"bg_xover_inl_trim\000"
+ 2191 01b5 62675F78 		.ascii	"bg_xover_inl_trim\000"
  2191      6F766572 
  2191      5F696E6C 
  2191      5F747269 
  2191      6D00
  2192              	.LASF43:
- 2193 01c9 6366675F 		.ascii	"cfg_memset_t\000"
+ 2193 01c7 6366675F 		.ascii	"cfg_memset_t\000"
  2193      6D656D73 
  2193      65745F74 
  2193      00
  2194              	.LASF45:
- 2195 01d6 6366675F 		.ascii	"cfg_memset_list\000"
+ 2195 01d4 6366675F 		.ascii	"cfg_memset_list\000"
  2195      6D656D73 
  2195      65745F6C 
  2195      69737400 
  2196              	.LASF36:
- 2197 01e6 64657374 		.ascii	"dest\000"
+ 2197 01e4 64657374 		.ascii	"dest\000"
  2197      00
  2198              	.LASF16:
- 2199 01eb 666C6F61 		.ascii	"float\000"
+ 2199 01e9 666C6F61 		.ascii	"float\000"
  2199      7400
  2200              	.LASF56:
- 2201 01f1 43794465 		.ascii	"CyDelayCycles\000"
+ 2201 01ef 43794465 		.ascii	"CyDelayCycles\000"
  2201      6C617943 
  2201      79636C65 
  2201      7300
  2202              	.LASF47:
- 2203 01ff 64657374 		.ascii	"destPtr\000"
+ 2203 01fd 64657374 		.ascii	"destPtr\000"
  2203      50747200 
  2204              	.LASF18:
- 2205 0207 72656738 		.ascii	"reg8\000"
+ 2205 0205 72656738 		.ascii	"reg8\000"
  2205      00
  2206              	.LASF4:
- 2207 020c 756E7369 		.ascii	"unsigned char\000"
+ 2207 020a 756E7369 		.ascii	"unsigned char\000"
  2207      676E6564 
  2207      20636861 
  2207      7200
  2208              	.LASF5:
- 2209 021a 73686F72 		.ascii	"short int\000"
+ 2209 0218 73686F72 		.ascii	"short int\000"
  2209      7420696E 
  2209      7400
  2210              	.LASF52:
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 50
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 50
 
 
- 2211 0224 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2211 0222 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  2211      43313120 
  2211      352E342E 
  2211      31203230 
  2211      31363036 
- 2212 0257 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2212 0255 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
  2212      20726576 
  2212      6973696F 
  2212      6E203233 
  2212      37373135 
- 2213 028a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2213 0288 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  2213      66756E63 
  2213      74696F6E 
  2213      2D736563 
  2213      74696F6E 
  2214              	.LASF34:
- 2215 02b2 706C6C4C 		.ascii	"pllLock\000"
+ 2215 02b0 706C6C4C 		.ascii	"pllLock\000"
  2215      6F636B00 
  2216              	.LASF22:
- 2217 02ba 63795F63 		.ascii	"cy_cfg_addrvalue_t\000"
+ 2217 02b8 63795F63 		.ascii	"cy_cfg_addrvalue_t\000"
  2217      66675F61 
  2217      64647276 
  2217      616C7565 
  2217      5F7400
  2218              	.LASF11:
- 2219 02cd 63686172 		.ascii	"char\000"
+ 2219 02cb 63686172 		.ascii	"char\000"
  2219      00
  2220              	.LASF48:
- 2221 02d2 73726350 		.ascii	"srcPtr\000"
+ 2221 02d0 73726350 		.ascii	"srcPtr\000"
  2221      747200
  2222              	.LASF39:
- 2223 02d9 53657441 		.ascii	"SetAnalogRoutingPumps\000"
+ 2223 02d7 53657441 		.ascii	"SetAnalogRoutingPumps\000"
  2223      6E616C6F 
  2223      67526F75 
  2223      74696E67 
  2223      50756D70 
  2224              	.LASF20:
- 2225 02ef 6F666673 		.ascii	"offset\000"
+ 2225 02ed 6F666673 		.ascii	"offset\000"
  2225      657400
  2226              	.LASF37:
- 2227 02f6 656E6162 		.ascii	"enabled\000"
+ 2227 02f4 656E6162 		.ascii	"enabled\000"
  2227      6C656400 
  2228              	.LASF50:
- 2229 02fe 6D656D73 		.ascii	"memset\000"
+ 2229 02fc 6D656D73 		.ascii	"memset\000"
  2229      657400
  2230              	.LASF35:
- 2231 0305 4359434F 		.ascii	"CYCONFIGCPY\000"
+ 2231 0303 4359434F 		.ascii	"CYCONFIGCPY\000"
  2231      4E464947 
  2231      43505900 
  2232              	.LASF53:
- 2233 0311 47656E65 		.ascii	"Generated_Source\\PSoC5\\cyfitter_cfg.c\000"
+ 2233 030f 47656E65 		.ascii	"Generated_Source\\PSoC5\\cyfitter_cfg.c\000"
  2233      72617465 
  2233      645F536F 
  2233      75726365 
  2233      5C50536F 
  2234              	.LASF41:
- 2235 0337 61646472 		.ascii	"address\000"
-ARM GAS  C:\Users\LASER_2\AppData\Local\Temp\ccNRI1QE.s 			page 51
+ 2235 0335 61646472 		.ascii	"address\000"
+ARM GAS  C:\Users\nikod\AppData\Local\Temp\ccQd0Xnk.s 			page 51
 
 
  2235      65737300 
  2236              	.LASF46:
- 2237 033f 6366675F 		.ascii	"cfg_memcpy_list\000"
+ 2237 033d 6366675F 		.ascii	"cfg_memcpy_list\000"
  2237      6D656D63 
  2237      70795F6C 
  2237      69737400 
  2238              	.LASF40:
- 2239 034f 63796669 		.ascii	"cyfitter_cfg\000"
+ 2239 034d 63796669 		.ascii	"cyfitter_cfg\000"
  2239      74746572 
  2239      5F636667 
  2239      00
